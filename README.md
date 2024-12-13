@@ -7,6 +7,15 @@ Upload an image.
 Draw a mask on the image (using white strokes for the mask).
 Save the original image and the mask image on the backend.
 Retrieve and display these uploaded images.
+
+### DEMO VIDEO
+
+
+https://github.com/user-attachments/assets/082acf5d-c516-409f-84ad-f7ec08c83935
+
+
+
+### Core Features
 ```bash
 ### **Core Features**
 
