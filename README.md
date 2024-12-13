@@ -80,7 +80,7 @@ Follow these steps to set up and run the project locally:
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/YashK13200/BookStore-MERN.git
+git clone https://github.com/YashK13200/image-inpainting-widget.git
 cd image-inpainting-widget
 ```
 
