@@ -7,7 +7,23 @@ Upload an image.
 Draw a mask on the image (using white strokes for the mask).
 Save the original image and the mask image on the backend.
 Retrieve and display these uploaded images.
+```bash
+### **Core Features**
 
+- **Image Upload**:
+    - Allow users to upload an image (JPEG/PNG format).
+    - Display the uploaded image in a canvas.
+- **Mask Drawing**:
+    - Let users draw on the image with a brush to create a mask.
+    - The mask should display the drawn area in **white** and the background in **black**.
+- **Brush Controls**:
+    - Allow users to increase or decrease the brush size.
+- **Export the Mask**:
+    - Generate the mask image based on the drawing (save the mask as a separate image).
+    - **Optional**: Allow users to clear the canvas for new drawings.
+- **Display the Images**:
+    - Display the original image and the generated mask image side-by-side below the canvas.
+```
 
 ## Technologies Used
 
