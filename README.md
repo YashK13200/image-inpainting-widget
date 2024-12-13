@@ -102,7 +102,38 @@ Start the frontend development server:
  npm run dev
    ```
 This will start the frontend on http://localhost:5171.
+# Importanat Point Here To Note 
+```bash
+There may you encounter error occurs because react-canvas-draw has a peer dependency of react versions 16.x || 17.x, while my project is using React 18.3.1. This is causing a dependency conflict.
 
+ Solution 1: Use --legacy-peer-deps Flag
+Run the following command instead of npm install:
+
+npm install react-canvas-draw fabric --legacy-peer-deps
+
+This flag tells npm to bypass strict peer dependency resolution and use the older behavior, which often resolves conflicts like this.
+
+Solution 2: Downgrade React Version (Not Recommended)
+If you want compatibility with react-canvas-draw without using a flag, you can downgrade React to 17.x:
+
+npm install react@17 react-dom@17
+npm install react-canvas-draw fabric
+
+However, this is not ideal as you lose React 18 features.
+
+Solution 3: Use an Alternative Drawing Library
+If you want to stick to React 18, you can use an alternative library like Fabric.js directly, which has full React 18 compatibility:
+
+Install Fabric.js:
+
+npm install fabric
+
+Replace react-canvas-draw with custom Fabric.js implementation. Fabric.js allows you to build the same functionality (mask drawing) using its API.
+
+Recommended Approach
+Use Solution 1 as it's the quickest and ensures react-canvas-draw still works with React 18 without further changes. Let me know if you need the Fabric.js-based implementation instead! 🚀
+
+```
 ### 4. Database Setup
 You need a MongoDB database to store the contacts. You can either:
 
