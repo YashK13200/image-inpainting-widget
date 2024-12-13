@@ -42,45 +42,19 @@ https://github.com/user-attachments/assets/082acf5d-c516-409f-84ad-f7ec08c83935
 - **HTTP Client**: Axios
 - **Others**: Mongoose (for MongoDB object modeling)
 
-# Frontend (React)
-#Image Upload and Canvas Drawing
-```bash
-The ImageCanvas component uses the react-canvas-draw library to draw masks over the uploaded image.
-The user can control brush size and clear the canvas if needed.
-The exportMask function extracts the mask layer as a black background with white strokes, preparing it for upload.
-State Management
-
-useState handles:
-imgSrc: Uploaded image source.
-maskSrc: Generated mask source.
-uploadStatus: Status messages for the user.
-Upload to Backend
-
-The handleUploadToBackend function:
-Converts images (original and mask) to Blob format.
-Uploads these images via a POST request using fetch and FormData.
-Display Results
-
-After successful upload:
-Both the original and mask images are displayed dynamically.
-Backend (Express + MongoDB)
-Multer for File Uploads
-
-The multer middleware handles multipart file uploads and stores them in the uploads/ directory.
-Routes
-
-POST /api/images/upload:
-Accepts two files: original (uploaded image) and mask (drawn mask).
-Saves their file paths in MongoDB using the Image model.
-GET /api/images/:
-Fetches and returns all uploaded image records.
-MongoDB Schema
-
-Stores paths for the original image and mask with a timestamp (createdAt).
-Environment Config
-
-.env is used to store the MongoDB URI for clean configuration.
-```
+  ###Fetch Images Endpoint
+  ```bash
+  Endpoint: GET http://localhost:5000/api/images/
+  Method: GET
+  ```
+  ###Upload Images Endpoint
+  ```bash
+  Endpoint: POST http://localhost:5000/api/images/upload
+  Method: POST
+  Body: Form Data
+  Add two keys for uploading files:
+  Key: original (Type: File) → Select the original image from your system.
+  Key: mask (Type: File) → Select the mask image from your system.
 
 ## Setup Instructions
 
@@ -163,5 +137,44 @@ Once the server is running, the database schema will be automatically created wh
   ├── app.js
   ├── .env
   └── package.json
+```
+# Frontend (React)
+#Image Upload and Canvas Drawing
+```bash
+The ImageCanvas component uses the react-canvas-draw library to draw masks over the uploaded image.
+The user can control brush size and clear the canvas if needed.
+The exportMask function extracts the mask layer as a black background with white strokes, preparing it for upload.
+State Management
+
+useState handles:
+imgSrc: Uploaded image source.
+maskSrc: Generated mask source.
+uploadStatus: Status messages for the user.
+Upload to Backend
+
+The handleUploadToBackend function:
+Converts images (original and mask) to Blob format.
+Uploads these images via a POST request using fetch and FormData.
+Display Results
+
+After successful upload:
+Both the original and mask images are displayed dynamically.
+Backend (Express + MongoDB)
+Multer for File Uploads
+
+The multer middleware handles multipart file uploads and stores them in the uploads/ directory.
+Routes
+
+POST /api/images/upload:
+Accepts two files: original (uploaded image) and mask (drawn mask).
+Saves their file paths in MongoDB using the Image model.
+GET /api/images/:
+Fetches and returns all uploaded image records.
+MongoDB Schema
+
+Stores paths for the original image and mask with a timestamp (createdAt).
+Environment Config
+
+.env is used to store the MongoDB URI for clean configuration.
 ```
 
