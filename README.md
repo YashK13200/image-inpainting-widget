@@ -1,4 +1,4 @@
-# Image-inpainting-widget
+# Image-inpainting-widget 👨🏽‍💻©️
 
 Project Overview
 This project allows users to:
@@ -42,12 +42,12 @@ https://github.com/user-attachments/assets/082acf5d-c516-409f-84ad-f7ec08c83935
 - **HTTP Client**: Axios
 - **Others**: Mongoose (for MongoDB object modeling)
 
-  ###Fetch Images Endpoint
+  # Fetch Images Endpoint
   ```bash
   Endpoint: GET http://localhost:5000/api/images/
   Method: GET
   ```
-  ###Upload Images Endpoint
+  # Upload Images Endpoint
   ```bash
   Endpoint: POST http://localhost:5000/api/images/upload
   Method: POST
