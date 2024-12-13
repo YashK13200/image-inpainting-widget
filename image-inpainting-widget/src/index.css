@@ -1,0 +1,173 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", Arial, sans-serif;
+    background: #f9f9f9;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #222;
+    margin-bottom: 1rem;
+  }
+  
+  h2, h3, h4 {
+    margin: 0.5rem 0;
+    color: #444;
+  }
+  
+  .App {
+    max-width: 1000px;
+    margin: 20px auto;
+    background: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+    padding: 20px;
+  }
+  
+  /* Buttons */
+  button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    margin-right: 10px;
+    transition: all 0.3s ease-in-out;
+    background: #4caf50;
+    color: #fff;
+  }
+  
+  button:hover {
+    background: #45a049;
+    transform: scale(1.05);
+  }
+  
+  button:active {
+    transform: scale(1);
+  }
+  
+  button:nth-of-type(2) {
+    background-color: #ff4d4d;
+  }
+  
+  button:nth-of-type(2):hover {
+    background-color: #ff3333;
+  }
+  
+  /* File Input */
+  input[type="file"] {
+    display: block;
+    margin: 1rem 0;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    width: calc(100% - 24px);
+    outline: none;
+    transition: border 0.3s ease-in-out;
+  }
+  
+  input[type="file"]:hover {
+    border-color: #4caf50;
+  }
+  
+  /* Range Slider */
+  label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+  
+  input[type="range"] {
+    flex: 1;
+    appearance: none;
+    height: 6px;
+    background: #ddd;
+    outline: none;
+    border-radius: 5px;
+  }
+  
+  input[type="range"]::-webkit-slider-thumb {
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    background: #4caf50;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  input[type="range"]:hover::-webkit-slider-thumb {
+    background: #45a049;
+  }
+  
+  /* Canvas Area */
+  .react-canvas-draw {
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Image Preview */
+  .image-preview, .image-display {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+  
+  .image-preview div, .image-display div {
+    text-align: center;
+    background: #f5f5f5;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 8px;
+    border: 2px solid #ddd;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  img:hover {
+    transform: scale(1.05);
+    border-color: #4caf50;
+  }
+  
+  /* Upload Status */
+  p {
+    margin: 10px 0;
+    font-weight: bold;
+    color: #4caf50;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .image-preview, .image-display {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    input[type="file"] {
+      width: 100%;
+    }
+  
+    button {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+  
